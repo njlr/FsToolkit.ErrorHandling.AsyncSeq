@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <RepositoryUrl>https://github.com/njlr/FsToolkit.ErrorHandling.AsyncSeq</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <TargetFramework>netstandard2.1</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Library.fs" />
