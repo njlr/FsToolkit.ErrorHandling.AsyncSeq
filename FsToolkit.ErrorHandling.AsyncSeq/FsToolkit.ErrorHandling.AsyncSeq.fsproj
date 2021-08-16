@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk" InitialTargets="SetVersion">
   <PropertyGroup>
     <RepositoryUrl>https://github.com/njlr/FsToolkit.ErrorHandling.AsyncSeq</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
