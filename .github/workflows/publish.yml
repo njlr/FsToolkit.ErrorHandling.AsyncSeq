@@ -1,0 +1,35 @@
+name: Publish
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+
+  build:
+    runs-on: ubuntu-20.04
+
+    env:
+      DOTNET_CLI_TELEMETRY_OPTOUT: true
+      DOTNET_NOLOGO: true
+
+    steps:
+    - name: Setup .NET Core SDK
+      uses: actions/setup-dotnet@v1.7.2
+      with:
+        dotnet-version: 5.0.100
+
+    - uses: actions/checkout@v2
+
+    - name: Build and test
+      run: |
+        dotnet tool restore
+        dotnet paket restore
+        dotnet build
+        dotnet fable ./FsToolkit.ErrorHandling.AsyncSeq/FsToolkit.ErrorHandling.AsyncSeq.fsproj
+        dotnet test
+    - name: Publish
+      run: |
+        dotnet pack --configuration Release ./FsToolkit.ErrorHandling.AsyncSeq
+        dotnet nuget push FsToolkit.ErrorHandling.AsyncSeq/**/*.nupkg  --source https://api.nuget.org/v3/index.json --api-key ${{secrets.NUGET_API_KEY}}
