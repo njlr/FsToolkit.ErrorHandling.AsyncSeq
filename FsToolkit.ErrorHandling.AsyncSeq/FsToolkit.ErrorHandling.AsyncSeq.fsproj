@@ -7,6 +7,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Library.fs" />
+    <Compile Include="AsyncResultSeq.fs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="*.fsproj; **\*.fs; **\*.fsi" PackagePath="fable\" />

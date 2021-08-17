@@ -1,4 +1,4 @@
-﻿module FsToolkit.ErrorHandling.AsyncSeq.Tests
+﻿module FsToolkit.ErrorHandling.Tests.AsyncSeq
 
 open System
 open FSharp.Control

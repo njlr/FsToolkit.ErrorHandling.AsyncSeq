@@ -2,7 +2,9 @@
 
 Allows usage of `AsyncSeq<'t>` and `AsyncSeq<Result<'t, 'e>>` in `Async<Result<'t, 'e>>` builders.
 
-With Paket:
+It also introduces a new computation expression, `asyncSeqResult` which allows you to write async sequences that might fail (`AsyncSeq<Result<'t, 'e>>`).
+
+Install with Paket:
 
 ```bash
 dotnet paket add FsToolkit.ErrorHandling.AsyncSeq
