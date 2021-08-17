@@ -4,7 +4,8 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Tests.fs" />
+    <Compile Include="AsyncSeq.fs" />
+    <Compile Include="AsyncSeqResult.fs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FsToolkit.ErrorHandling.AsyncSeq\FsToolkit.ErrorHandling.AsyncSeq.fsproj" />
